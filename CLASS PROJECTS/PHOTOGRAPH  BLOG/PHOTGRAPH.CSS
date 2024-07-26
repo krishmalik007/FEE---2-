@@ -14,7 +14,7 @@ nav a{
     color: white;
     font-size: 1.9rem;
 }
-ul li {
+ul li{
     text-align: left;
 }
 .a{
@@ -66,14 +66,13 @@ section.b img {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.8s, transform 0.8s;
-    visibility: hidden; /* Initially hidden */
+    visibility: hidden;
 }
 
 .image:hover .fa-solid {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, -50%);
-}
+    transform: translate(-50%, -50%);}
 
 
 .b{
