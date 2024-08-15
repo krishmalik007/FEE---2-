@@ -1,198 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .sidebar a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-
-        .hero {
-            background: url('') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section {
-            padding: 60px 20px;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .skills, .experience {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .skills ul, .experience ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills ul li, .experience ul li {
-            font-size: 1.125rem;
-            padding: 10px 0;
-        }
-
-        .experience .card {
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .experience .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krish Malik | Web Developer</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="sidebar">
-        <h3>My Portfolio</h3>
-        <a href="#introduction">Introduction</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+<body style="background-color: #121212; color: #00ff00;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Krish Malik</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#introduction">Introduction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="content">
-        <section class="hero">
-            <div>
-                <h1>Welcome to My Portfolio</h1>
-                <p>Hi, I'm Krish Malik , A Developer</p>
-            </div>
-        </section>
-
-        <section id="introduction" class="section">
-            <div class="container">
-                <h2>Introduction</h2>
-                <p class="text-center">I'm a dedicated student pursuing a Bachelor of Engineering in Computer Science at Chitkara University. With a passion for technology and problem-solving, I’ve developed a strong foundation in various programming languages and web development tools. My skills include HTML, CSS, and basic JavaScript, allowing me to create dynamic and responsive web designs. Additionally, I am proficient in Python, C++, and C, which equips me with the versatility to tackle a range of programming challenges. This portfolio showcases my projects and skills, reflecting my journey as a burgeoning software engineer. I am eager to apply my knowledge and continue learning, contributing to innovative solutions in the tech world. Thank you for visiting!</p>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>HTML & CSS</li>
-                        <li>Bootstrap</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="text-center mb-4">Contact Me</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-dark">Send</button>
-                </form>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2024 Krish Malik. All rights reserved.</p>
-        </footer>
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-white" style="background-color: #1e1e1e; height: 50vh;">
+    <div class="container text-center">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I'm Krish Malik, a passionate Web Developer.</p>
     </div>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Introduction Section -->
+  <section id="introduction" class="section bg-dark py-5">
+    <div class="container">
+      <h2 style="color: white;">Introduction</h2>
+      <p class="lead"style="color: white;">I'm a dedicated student pursuing a Bachelor of Engineering in Computer Science at Chitkara University. My passion for technology and problem-solving has led me to develop a strong foundation in various programming languages and web development tools. My skills include HTML, CSS, JavaScript, Python, C++, and C, equipping me to tackle a range of programming challenges. This portfolio showcases my projects and skills, reflecting my journey as a burgeoning software engineer. I am eager to apply my knowledge, continue learning, and contribute to innovative solutions in the tech world. Thank you for visiting!</p>
+    </div>
+  </section>
+
+<!-- Skills Section -->
+<section id="skills" class="section py-5 d-flex align-items-center" style="background-color: #1e1e1e; ">
+    <div class="container text-center" style="max-width: 80%; margin: 0 auto; color: #ffffff;">
+      <h2>Skills</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #121212; color: #ffffff;">
+              HTML & CSS
+              <span class="badge badge-success badge-pill" style="background-color: red;">Expert</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #121212; color: #ffffff;">
+              Bootstrap
+              <span class="badge badge-success badge-pill" style="background-color: orange;">Proficient</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #121212; color: #ffffff;">
+              JavaScript
+              <span class="badge badge-success badge-pill">Intermediate</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-dark py-5 text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name" required style="background-color: #1e1e1e; color: #00ff00;">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email" required style="background-color: #1e1e1e; color: #00ff00;">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required style="background-color: #1e1e1e; color: #00ff00;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 Krish Malik. All Rights Reserved.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/krish-malik" class="text-white mx-2" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/krishmalik" class="text-white mx-2" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
