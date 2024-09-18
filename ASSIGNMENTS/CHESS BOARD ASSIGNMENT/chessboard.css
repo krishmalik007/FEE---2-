@@ -10,6 +10,7 @@ body {
   .chessboard {
     display: grid;
     grid-template-columns: repeat(8, 80px); 
+
   }
   
   .square {
@@ -18,12 +19,12 @@ body {
   }
   
   .black {
-    background-color: rgba(0, 0, 0, 0.756);
+    background-color: black;
   }
   
   .white {
     background-color:rgb(233, 228, 228);
-    border:dashed rgba(64, 61, 61, 0.433);
+    border:solid rgba(64, 61, 61, 0.433);
   }
   
   .vh-100 {
