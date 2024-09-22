@@ -19,12 +19,14 @@ body {
   }
   
   .black {
-    background-color: black;
+    background-color: rgba(27, 95, 27, 0.521);
+    font-size: 50px;
   }
   
   .white {
-    background-color:rgb(233, 228, 228);
-    border:solid rgba(64, 61, 61, 0.433);
+    background-color:bisque;
+   
+    font-size: 50px;
   }
   
   .vh-100 {
