@@ -1,97 +1,268 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Chessboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="chessboard.css">
-</head>
-<body>
-<h1 align="center"style="margin-bottom: -50px;"> CHESSBOARD GAME </h1>
-  <div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="chessboard">
-     <div class="row">
-        <div class="square black"style="color:black;">&#9820;</div>
-        <div class="square white"style="color:black;">&#9817;</div>
-        <div class="square black"style="color:black;"></div>
-        <div class="square white"style="color:black;"></div>
-        <div class="square black"style="color:black;"></div>
-        <div class="square white"style="color:black;"></div>
-        <div class="square black"style="color:white;">&#9817;</div>
-        <div class="square white"style="color:white;">&#9820;</div>
-      </div>
-      <div class="row">
-        <div class="square white"style="color:black;">&#9822;</div>
-        <div class="square black"style="color:black;">&#9817;</div>
-        <div class="square white"style="color:black;"></div>
-        <div class="square black"style="color:black;"></div>
-        <div class="square white"style="color:black;"></div>
-        <div class="square black"style="color:black;"></div>
-        <div class="square white"style="color:white;">&#9817;</div>
-        <div class="square black"style="color:white;">&#9822;</div>
-      </div>
-      <div class="row">
-        <div class="square black"style="color:black;">&#9821;</div>
-        <div class="square white"style="color:black;">&#9817;</div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Chessboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="chessboard.css">
+  </head>
+  <body>
+    <h1 align="center" style="margin-bottom: -50px;">CHESSBOARD GAME</h1>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="chessboard" id="chessboard">
+        <!-- Row 1 (Black pieces) -->
+        <div class="square black" data-piece="black-rook">&#9820;</div>
+        <div class="square white" data-piece="black-knight">&#9822;</div>
+        <div class="square black" data-piece="black-bishop">&#9821;</div>
+        <div class="square white" data-piece="black-queen">&#9819;</div>
+        <div class="square black" data-piece="black-king">&#9818;</div>
+        <div class="square white" data-piece="black-bishop">&#9821;</div>
+        <div class="square black" data-piece="black-knight">&#9822;</div>
+        <div class="square white" data-piece="black-rook">&#9820;</div>
+
+        <!-- Row 2 (Black pawns) -->
+        <div class="square white" data-piece="black-pawn">&#9817;</div>
+        <div class="square black" data-piece="black-pawn">&#9817;</div>
+        <div class="square white" data-piece="black-pawn">&#9817;</div>
+        <div class="square black" data-piece="black-pawn">&#9817;</div>
+        <div class="square white" data-piece="black-pawn">&#9817;</div>
+        <div class="square black" data-piece="black-pawn">&#9817;</div>
+        <div class="square white" data-piece="black-pawn">&#9817;</div>
+        <div class="square black" data-piece="black-pawn">&#9817;</div>
+
+        <!-- Row 3 (Empty) -->
         <div class="square black"></div>
         <div class="square white"></div>
         <div class="square black"></div>
         <div class="square white"></div>
-        <div class="square black"style="color:white;">&#9817;</div>
-        <div class="square white"style="color:white;">&#9821;</div>
-      </div>
-      <div class="row">
-        <div class="square white"style="color:black;">&#9819;</div>
-        <div class="square black"style="color:black;">&#9817;</div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"></div>
-        <div class="square black"></div>
-        <div class="square white"style="color:white;">&#9817;</div>
-        <div class="square black"style="color:white;">&#9819;</div>
-      </div>
-      <div class="row">
-        <div class="square black"style="color:black;">&#9818;</div>
-        <div class="square white"style="color:black;">&#9817;</div>
         <div class="square black"></div>
         <div class="square white"></div>
         <div class="square black"></div>
         <div class="square white"></div>
-        <div class="square black"style="color:white;">&#9817;</div>
-        <div class="square white"style="color:white;">&#9818;</div>
-      </div>
-      <div class="row">
-        <div class="square white"style="color:black;">&#9821;</div>
-        <div class="square black"style="color:black;">&#9817;</div>
+
+        <!-- Row 4 (Empty) -->
         <div class="square white"></div>
         <div class="square black"></div>
         <div class="square white"></div>
         <div class="square black"></div>
-        <div class="square white"style="color:white;.">&#9817;</div>
-        <div class="square black"style="color:white;">&#9821;</div>
-      </div>
-      <div class="row">
-        <div class="square black"style="color:black;">&#9822;</div>
-        <div class="square white"style="color:black;">&#9817;</div>
-        <div class="square black"style="color:white;"></div>
-        <div class="square white"style="color:white;"></div>
-        <div class="square black"style="color:white;"></div>
-        <div class="square white"style="color:white;"></div>
-        <div class="square black"style="color:white;">&#9817;</div>
-        <div class="square white"style="color:white;">&#9822;</div>
-      </div>
-      <div class="row">
-        <div class="square white"style="color:black;">&#9820;</div>
-        <div class="square black"style="color:black;">&#9817;</div>
-        <div class="square white"style="color:white;"></div>
-        <div class="square black"style="color:white;"></div>
-        <div class="square white"style="color:white;"></div>
-        <div class="square black"style="color:white;"></div>
-        <div class="square white"style="color:white;">&#9817;</div>
-        <div class="square black"style="color:white;">&#9820;</div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+
+        <!-- Row 5 (Empty) -->
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+
+        <!-- Row 6 (Empty) -->
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+        <div class="square white"></div>
+        <div class="square black"></div>
+
+        <!-- Row 7 (White pawns) -->
+        <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
+        <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
+
+        <!-- Row 8 (White pieces) -->
+        <div class="square white" data-piece="white-rook"style="color:white;">&#9814;</div>
+        <div class="square black" data-piece="white-knight"style="color:white;">&#9816;</div>
+        <div class="square white" data-piece="white-bishop"style="color:white;">&#9815;</div>
+        <div class="square black" data-piece="white-queen"style="color:white;">&#9813;</div>
+        <div class="square white" data-piece="white-king"style="color:white;">&#9812;</div>
+        <div class="square black" data-piece="white-bishop"style="color:white;">&#9815;</div>
+        <div class="square white" data-piece="white-knight"style="color:white;">&#9816;</div>
+        <div class="square black" data-piece="white-rook"style="color:white;">&#9814;</div>
       </div>
     </div>
-  </div>
-</body>
-</html>
+
+    <script>
+ let selectedSquare = null;
+let selectedPiece = null;
+
+document.querySelectorAll('.square').forEach(square => {
+  square.addEventListener('click', function () {
+    if (selectedSquare) {
+      // Move only if the destination is valid for the selected piece
+      const validMoves = getValidMoves(selectedSquare, selectedPiece);
+      if (validMoves.includes(this)) {
+        movePiece(this); // Move the piece to the new square
+      }
+      selectedSquare = null;
+      selectedPiece = null;
+      clearHighlights(); // Clear move highlights after moving
+    } else if (this.getAttribute('data-piece')) {
+      // Select the square with a piece
+      selectedSquare = this;
+      selectedPiece = this.getAttribute('data-piece');
+      highlightValidMoves(selectedSquare, selectedPiece); // Highlight valid moves
+    }
+  });
+});
+
+// Highlight valid moves
+function highlightValidMoves(square, piece) {
+  const validMoves = getValidMoves(square, piece);
+  validMoves.forEach(move => {
+    move.classList.add('highlight');
+  });
+}
+
+// Get valid moves for each piece based on the current square
+function getValidMoves(square, piece) {
+  const pieceType = piece.split('-')[1];
+  const validMoves = [];
+  const board = Array.from(document.querySelectorAll('.square'));
+  const squareIndex = board.indexOf(square);
+  const row = Math.floor(squareIndex / 8);
+  const col = squareIndex % 8;
+
+  switch (pieceType) {
+    case 'pawn':
+      // Pawns can move forward by 1 (black down, white up)
+      if (piece.startsWith('white')) {
+        if (row > 0 && !board[squareIndex - 8].getAttribute('data-piece')) {
+          validMoves.push(board[squareIndex - 8]);
+        }
+      } else {
+        if (row < 7 && !board[squareIndex + 8].getAttribute('data-piece')) {
+          validMoves.push(board[squareIndex + 8]);
+        }
+      }
+      break;
+    case 'rook':
+      // Rooks move horizontally or vertically
+      validMoves.push(...getLinearMoves(squareIndex, board, row, col, true, true));
+      break;
+    case 'knight':
+      // Knights move in "L" shapes
+      validMoves.push(...getKnightMoves(squareIndex, board, row, col));
+      break;
+    case 'bishop':
+      // Bishops move diagonally
+      validMoves.push(...getLinearMoves(squareIndex, board, row, col, false, true));
+      break;
+    case 'queen':
+      // Queens move both horizontally, vertically, and diagonally
+      validMoves.push(...getLinearMoves(squareIndex, board, row, col, true, true));
+      break;
+    case 'king':
+      // Kings move one square in any direction
+      validMoves.push(...getKingMoves(squareIndex, board, row, col));
+      break;
+  }
+
+  return validMoves;
+}
+
+// Move the piece to the new square
+function movePiece(targetSquare) {
+  targetSquare.innerHTML = selectedSquare.innerHTML;
+  targetSquare.setAttribute('data-piece', selectedSquare.getAttribute('data-piece'));
+  selectedSquare.innerHTML = '';
+  selectedSquare.removeAttribute('data-piece');
+}
+
+// Clear highlights after moving
+function clearHighlights() {
+  document.querySelectorAll('.square').forEach(square => {
+    square.classList.remove('highlight');
+  });
+}
+
+// Get linear moves (used for rooks, bishops, queens)
+function getLinearMoves(index, board, row, col, horizontal = true, diagonal = false) {
+  const moves = [];
+  const directions = [];
+
+  if (horizontal) {
+    // Left, right, up, down directions
+    directions.push([-1, 0], [1, 0], [0, -1], [0, 1]);
+  }
+  if (diagonal) {
+    // Diagonal directions
+    directions.push([-1, -1], [-1, 1], [1, -1], [1, 1]);
+  }
+
+  directions.forEach(direction => {
+    let r = row;
+    let c = col;
+    while (true) {
+      r += direction[0];
+      c += direction[1];
+      if (r < 0 || r > 7 || c < 0 || c > 7) break;
+      const targetIndex = r * 8 + c;
+      const targetSquare = board[targetIndex];
+      if (targetSquare.getAttribute('data-piece')) break; // Stop at the first piece
+      moves.push(targetSquare);
+    }
+  });
+
+  return moves;
+}
+
+// Get knight moves (L-shaped)
+function getKnightMoves(index, board, row, col) {
+  const moves = [];
+  const knightMoves = [
+    [-2, -1], [-2, 1], [-1, -2], [-1, 2], [1, -2], [1, 2], [2, -1], [2, 1]
+  ];
+
+  knightMoves.forEach(move => {
+    const r = row + move[0];
+    const c = col + move[1];
+    if (r >= 0 && r <= 7 && c >= 0 && c <= 7) {
+      const targetIndex = r * 8 + c;
+      const targetSquare = board[targetIndex];
+      if (!targetSquare.getAttribute('data-piece')) {
+        moves.push(targetSquare);
+      }
+    }
+  });
+
+  return moves;
+}
+
+// Get king moves (one square in any direction)
+function getKingMoves(index, board, row, col) {
+  const moves = [];
+  const kingMoves = [
+    [-1, 0], [1, 0], [0, -1], [0, 1],
+    [-1, -1], [-1, 1], [1, -1], [1, 1]
+  ];
+
+  kingMoves.forEach(move => {
+    const r = row + move[0];
+    const c = col + move[1];
+    if (r >= 0 && r <= 7 && c >= 0 && c <= 7) {
+      const targetIndex = r * 8 + c;
+      const targetSquare = board[targetIndex];
+      if (!targetSquare.getAttribute('data-piece')) {
+        moves.push(targetSquare);
+      }
+    }
+  });
+
+  return moves;
+}
+
+    </script>
+  </body>
+  </html>
