@@ -19,13 +19,12 @@ body {
     color: #ffcc00;
 }
 
-/* Hero Section */
 .jumbotron {
     background-color: #1a1a1a;
     color: #ffffff;
 }
 
-/* Card Styles */
+
 .card {
     background-color: #2a2a2a;
     color: #ffffff;
@@ -87,7 +86,6 @@ body {
     border-color: #1e7e34;
 }
 
-/* Button Styles */
 .btn-outline-primary,
 .btn-outline-success,
 .btn-outline-secondary {
@@ -102,7 +100,7 @@ body {
     color: #121212;
 }
 
-/* Custom Button Hover */
+
 #tani {
     color: green;
 }
@@ -116,7 +114,6 @@ body {
     color: white;
 }
 
-/* Stylish Text */
 .stylish-text {
     font-family: 'Lobster', cursive;
     font-size: 30px;
@@ -126,14 +123,12 @@ body {
     padding-left: 20px;
 }
 
-/* Footer */
 footer {
     background-color: #1f1f1f;
     color: #ffffff;
     padding: 20px 0;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .stylish-text {
         font-size: 24px;
