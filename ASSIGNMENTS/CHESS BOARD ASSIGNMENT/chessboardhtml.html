@@ -11,7 +11,6 @@
     <h1 align="center" style="margin-bottom: -50px;">CHESSBOARD GAME</h1>
     <div class="container d-flex justify-content-center align-items-center vh-100">
       <div class="chessboard" id="chessboard">
-        <!-- Row 1 (Black pieces) -->
         <div class="square black" data-piece="black-rook">&#9820;</div>
         <div class="square white" data-piece="black-knight">&#9822;</div>
         <div class="square black" data-piece="black-bishop">&#9821;</div>
@@ -21,7 +20,7 @@
         <div class="square black" data-piece="black-knight">&#9822;</div>
         <div class="square white" data-piece="black-rook">&#9820;</div>
 
-        <!-- Row 2 (Black pawns) -->
+     
         <div class="square white" data-piece="black-pawn">&#9817;</div>
         <div class="square black" data-piece="black-pawn">&#9817;</div>
         <div class="square white" data-piece="black-pawn">&#9817;</div>
@@ -31,7 +30,7 @@
         <div class="square white" data-piece="black-pawn">&#9817;</div>
         <div class="square black" data-piece="black-pawn">&#9817;</div>
 
-        <!-- Row 3 (Empty) -->
+    
         <div class="square black"></div>
         <div class="square white"></div>
         <div class="square black"></div>
@@ -41,7 +40,7 @@
         <div class="square black"></div>
         <div class="square white"></div>
 
-        <!-- Row 4 (Empty) -->
+    
         <div class="square white"></div>
         <div class="square black"></div>
         <div class="square white"></div>
@@ -51,7 +50,6 @@
         <div class="square white"></div>
         <div class="square black"></div>
 
-        <!-- Row 5 (Empty) -->
         <div class="square black"></div>
         <div class="square white"></div>
         <div class="square black"></div>
@@ -61,7 +59,7 @@
         <div class="square black"></div>
         <div class="square white"></div>
 
-        <!-- Row 6 (Empty) -->
+    
         <div class="square white"></div>
         <div class="square black"></div>
         <div class="square white"></div>
@@ -71,7 +69,7 @@
         <div class="square white"></div>
         <div class="square black"></div>
 
-        <!-- Row 7 (White pawns) -->
+    
         <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
         <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
         <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
@@ -81,7 +79,6 @@
         <div class="square black" data-piece="white-pawn" style="color:white;">&#9817;</div>
         <div class="square white" data-piece="white-pawn" style="color:white;">&#9817;</div>
 
-        <!-- Row 8 (White pieces) -->
         <div class="square white" data-piece="white-rook"style="color:white;">&#9814;</div>
         <div class="square black" data-piece="white-knight"style="color:white;">&#9816;</div>
         <div class="square white" data-piece="white-bishop"style="color:white;">&#9815;</div>
@@ -100,24 +97,24 @@ let selectedPiece = null;
 document.querySelectorAll('.square').forEach(square => {
   square.addEventListener('click', function () {
     if (selectedSquare) {
-      // Move only if the destination is valid for the selected piece
+      
       const validMoves = getValidMoves(selectedSquare, selectedPiece);
       if (validMoves.includes(this)) {
-        movePiece(this); // Move the piece to the new square
+        movePiece(this); 
       }
       selectedSquare = null;
       selectedPiece = null;
-      clearHighlights(); // Clear move highlights after moving
+      clearHighlights(); 
     } else if (this.getAttribute('data-piece')) {
-      // Select the square with a piece
+      
       selectedSquare = this;
       selectedPiece = this.getAttribute('data-piece');
-      highlightValidMoves(selectedSquare, selectedPiece); // Highlight valid moves
+      highlightValidMoves(selectedSquare, selectedPiece); 
     }
   });
 });
 
-// Highlight valid moves
+
 function highlightValidMoves(square, piece) {
   const validMoves = getValidMoves(square, piece);
   validMoves.forEach(move => {
@@ -125,7 +122,7 @@ function highlightValidMoves(square, piece) {
   });
 }
 
-// Get valid moves for each piece based on the current square
+
 function getValidMoves(square, piece) {
   const pieceType = piece.split('-')[1];
   const validMoves = [];
@@ -136,7 +133,7 @@ function getValidMoves(square, piece) {
 
   switch (pieceType) {
     case 'pawn':
-      // Pawns can move forward by 1 (black down, white up)
+      
       if (piece.startsWith('white')) {
         if (row > 0 && !board[squareIndex - 8].getAttribute('data-piece')) {
           validMoves.push(board[squareIndex - 8]);
@@ -148,23 +145,21 @@ function getValidMoves(square, piece) {
       }
       break;
     case 'rook':
-      // Rooks move horizontally or vertically
+  
       validMoves.push(...getLinearMoves(squareIndex, board, row, col, true, true));
       break;
     case 'knight':
-      // Knights move in "L" shapes
+    
       validMoves.push(...getKnightMoves(squareIndex, board, row, col));
       break;
     case 'bishop':
-      // Bishops move diagonally
       validMoves.push(...getLinearMoves(squareIndex, board, row, col, false, true));
       break;
     case 'queen':
-      // Queens move both horizontally, vertically, and diagonally
+   
       validMoves.push(...getLinearMoves(squareIndex, board, row, col, true, true));
       break;
     case 'king':
-      // Kings move one square in any direction
       validMoves.push(...getKingMoves(squareIndex, board, row, col));
       break;
   }
@@ -172,7 +167,6 @@ function getValidMoves(square, piece) {
   return validMoves;
 }
 
-// Move the piece to the new square
 function movePiece(targetSquare) {
   targetSquare.innerHTML = selectedSquare.innerHTML;
   targetSquare.setAttribute('data-piece', selectedSquare.getAttribute('data-piece'));
@@ -180,24 +174,24 @@ function movePiece(targetSquare) {
   selectedSquare.removeAttribute('data-piece');
 }
 
-// Clear highlights after moving
+
 function clearHighlights() {
   document.querySelectorAll('.square').forEach(square => {
     square.classList.remove('highlight');
   });
 }
 
-// Get linear moves (used for rooks, bishops, queens)
+
 function getLinearMoves(index, board, row, col, horizontal = true, diagonal = false) {
   const moves = [];
   const directions = [];
 
   if (horizontal) {
-    // Left, right, up, down directions
+    
     directions.push([-1, 0], [1, 0], [0, -1], [0, 1]);
   }
   if (diagonal) {
-    // Diagonal directions
+    
     directions.push([-1, -1], [-1, 1], [1, -1], [1, 1]);
   }
 
@@ -210,7 +204,7 @@ function getLinearMoves(index, board, row, col, horizontal = true, diagonal = fa
       if (r < 0 || r > 7 || c < 0 || c > 7) break;
       const targetIndex = r * 8 + c;
       const targetSquare = board[targetIndex];
-      if (targetSquare.getAttribute('data-piece')) break; // Stop at the first piece
+      if (targetSquare.getAttribute('data-piece')) break; 
       moves.push(targetSquare);
     }
   });
@@ -218,7 +212,6 @@ function getLinearMoves(index, board, row, col, horizontal = true, diagonal = fa
   return moves;
 }
 
-// Get knight moves (L-shaped)
 function getKnightMoves(index, board, row, col) {
   const moves = [];
   const knightMoves = [
@@ -240,7 +233,7 @@ function getKnightMoves(index, board, row, col) {
   return moves;
 }
 
-// Get king moves (one square in any direction)
+
 function getKingMoves(index, board, row, col) {
   const moves = [];
   const kingMoves = [
