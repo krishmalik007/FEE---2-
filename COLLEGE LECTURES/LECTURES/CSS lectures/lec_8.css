@@ -1,23 +1,23 @@
-/* universal selector */
+
 *{
     font-size :20px;
     font-family: 'Courier New', Courier, monospace;
 }
-/* id selector  */
+
 #car{
     color: gray ;
     border: 2px dotted green;
 }
-/* input type selector */
+
 input[type="text"]{
     background-color: yellow;
 }
-/* class selector */
+
 .div1{
     color:blue ; 
     background-color: brown ;
 }
-/* element selector  */
+
 p{
     color:purple;
     background-color: bisque;

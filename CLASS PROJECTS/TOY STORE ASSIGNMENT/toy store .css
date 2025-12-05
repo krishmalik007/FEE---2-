@@ -429,12 +429,12 @@ hr {
     background-attachment: fixed;
     margin-top: 5%;
     display: flex;
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    justify-content: center; 
     position: relative;
     margin-bottom: 8%;
-    color: white; /* Text color */
-    text-align: center; /* Center text */
+    color: white;
+    text-align: center;
 }
 .div12{
     text-align: center;
@@ -486,9 +486,9 @@ hr {
     height: 40px;
     font-size: 18px;
     border-radius: 20px;
-    border: none; /* Changed to none for a clean look */
+    border: none; 
     cursor: pointer;
-    margin-top: 30px; /* Adds space between text and button */
+    margin-top: 30px; 
 }
 .div18{
     display: flex;
